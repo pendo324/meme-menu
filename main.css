@@ -35,6 +35,27 @@ body {
   grid-row-end: span 1;
 }
 
+.preview {
+  padding-top: 1em;
+  padding-right: 1em;
+}
+
+.preview > .top img {
+  padding-bottom: 1em;
+}
+
+.preview img {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0 !important;
+}
 
 menu-item {
   padding-top: 0.6em;;

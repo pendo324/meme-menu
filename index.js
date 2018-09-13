@@ -38,17 +38,43 @@ const setSelected = () => {
   lastLeft = leftElem;
   lastRight = rightElem;
 
-  previewTop.innerHTML = '';
-  previewBottom.innerHTML = '';
+  const meme1 = document.createElement('img');
+  meme1.src = leftElem.getAttribute('image');
 
-  const meme1 = document.createElement('span');
-  meme1.innerText = leftElem.getAttribute('title');
+  const meme2 = document.createElement('img');
+  meme2.src = rightElem.getAttribute('image');
 
-  const meme2 = document.createElement('span');
-  meme2.innerText = rightElem.getAttribute('title');
+  if (previewTop.childNodes.length > 0) {
+    // fade out
+    const existingImg = previewTop.querySelector('img');
+    existingImg.classList.add('fade-out');
+    existingImg.addEventListener(
+      'webkitTransitionEnd',
+      () => {
+        previewTop.innerHTML = '';
+        previewTop.appendChild(meme1);
+      },
+      false
+    );
+  } else {
+    previewTop.appendChild(meme1);
+  }
 
-  previewTop.appendChild(meme1);
-  previewBottom.appendChild(meme2);
+  if (previewBottom.childNodes.length > 0) {
+    // fade out
+    const existingImg = previewBottom.querySelector('img');
+    existingImg.classList.add('fade-out');
+    existingImg.addEventListener(
+      'webkitTransitionEnd',
+      () => {
+        previewBottom.innerHTML = '';
+        previewBottom.appendChild(meme2);
+      },
+      false
+    );
+  } else {
+    previewBottom.appendChild(meme2);
+  }
 };
 
 setSelected();
