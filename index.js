@@ -40,9 +40,11 @@ const setSelected = () => {
 
   const meme1 = document.createElement('img');
   meme1.src = leftElem.getAttribute('image');
+  meme1.classList.add('fade-in');
 
   const meme2 = document.createElement('img');
   meme2.src = rightElem.getAttribute('image');
+  meme2.classList.add('fade-in');
 
   if (previewTop.childNodes.length > 0) {
     // fade out
@@ -53,11 +55,15 @@ const setSelected = () => {
       () => {
         previewTop.innerHTML = '';
         previewTop.appendChild(meme1);
+        setTimeout(() => {
+          previewTop.querySelector('img').classList.remove('fade-in');
+        });
       },
       false
     );
   } else {
     previewTop.appendChild(meme1);
+    previewTop.querySelector('img').classList.remove('fade-in');
   }
 
   if (previewBottom.childNodes.length > 0) {
@@ -69,11 +75,15 @@ const setSelected = () => {
       () => {
         previewBottom.innerHTML = '';
         previewBottom.appendChild(meme2);
+        setTimeout(() => {
+          previewBottom.querySelector('img').classList.remove('fade-in');
+        });
       },
       false
     );
   } else {
     previewBottom.appendChild(meme2);
+    previewBottom.querySelector('img').classList.remove('fade-in');
   }
 };
 

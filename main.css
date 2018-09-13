@@ -57,6 +57,10 @@ body {
   opacity: 0 !important;
 }
 
+.fade-in {
+  opacity: 0 !important;
+}
+
 menu-item {
   padding-top: 0.6em;;
 }
