@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <link href="./main.css" rel="stylesheet" />
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <div id="menu">
+    <section class="left">
+      <menu-title title="Desayuno"></menu-title>
+      <menu-item title="Test item 1" subtitle="Test description 1" price="2.50"></menu-item>
+      <menu-item title="Test item 2" subtitle="Test description 2" price="2.50"></menu-item>
+      <menu-item title="Test item 3" subtitle="extra memes" price="2.50" subprice="+ $0.80"></menu-item>
+      <menu-item title="Test item 4" subtitle="Test description 4" price="2.50"></menu-item>
+
+      <menu-title title="Pasteles y Croquetas"></menu-title>
+      <menu-item title="Test item 5" subtitle="Test description 1" price="2.50"></menu-item>
+      <menu-item title="Test item 6" subtitle="Test description 2" price="2.50"></menu-item>
+      <menu-item title="Test item 7" subtitle="extra memes" price="2.50" subprice="+ $0.80"></menu-item>
+      <menu-item title="Test item 8" subtitle="Test description 4" price="2.50"></menu-item>
+
+    </section>
+    <section class="right">
+      <menu-title title="Desayuno"></menu-title>
+      <menu-item title="Test item 1" subtitle="Test description 1" price="2.50"></menu-item>
+      <menu-item title="Test item 2" subtitle="Test description 2" price="2.50"></menu-item>
+      <menu-item title="Test item 3" subtitle="extra memes" price="2.50" subprice="+ $0.80"></menu-item>
+      <menu-item title="Test item 4" subtitle="Test description 4" price="2.50"></menu-item>
+    </section>
+    <section class="preview">
+      <section class="top"></section>
+      <section class="bottom"></section>
+    </section>
+  </div>
+</body>
+
+</html>
+
+<template id="menu-title">
+  <span class="title"></span>
+</template>
+
+<template id="menu-item">
+  <style>
+    .wrapper {
+      display: grid;
+
+      grid-template-columns: 75% auto;
+      grid-template-rows: 60% auto;
+    }
+
+    .wrapper>.title {
+      grid-column-start: 1;
+      grid-column-end: span 1;
+      grid-row-start: 1;
+      grid-row-end: span 1;
+    }
+
+    .wrapper>.subtitle {
+      grid-column-start: 1;
+      grid-column-end: span 1;
+      grid-row-start: 2;
+      grid-row-end: span 1;
+
+      font-size: 0.7em;
+    }
+
+    .wrapper>.price {
+      grid-column-start: 2;
+      grid-column-end: span 1;
+      grid-row-start: 1;
+      grid-row-end: span 1;
+    }
+
+    .wrapper>.subprice {
+      grid-column-start: 2;
+      grid-column-end: span 1;
+      grid-row-start: 2;
+      grid-row-end: span 1;
+
+      font-size: 0.7em;
+    }
+
+    .selected {
+      color: red;
+    }
+  </style>
+  <div class="wrapper">
+    <span class="title"></span>
+    <span class="subtitle"></span>
+    <span class="price"></span>
+    <span class="subprice"></span>
+  </div>
+</template>
