@@ -1,0 +1,12 @@
+{
+  "menuCategories": [{
+    "title": "Desayuno",
+    "items": [{
+      "title": "Test item 1",
+      "subtitle": "Test description 1",
+      "price": "2.50",
+      "subprice": "+ $.80",
+      "image": ""
+    }]
+  }]
+}

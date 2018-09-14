@@ -1,0 +1,22 @@
+{
+  "name": "menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pendo324/meme-menu.git"
+  },
+  "author": "pendo324",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pendo324/meme-menu/issues"
+  },
+  "homepage": "https://github.com/pendo324/meme-menu#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
